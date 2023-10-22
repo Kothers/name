@@ -1,0 +1,256 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Ninja Legends FluskyHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local MTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+MTab:AddButton({
+Name = "AutoSwing",
+    Callback = function()
+     _G.autoSwing = true
+        while wait() do
+            while _G.autoSwing == true do
+            local args = {[1] = "swingKatana"}
+            game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+            wait()
+            end
+        end
+  	end    
+})
+
+MTab:AddButton({
+Name = "DisableAutoSwing",
+    Callback = function()
+     _G.autoSwing = false
+        while wait() do
+            while _G.autoSwing == true do
+            local args = {[1] = "swingKatana"}
+            game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+            wait()
+            end
+        end
+  	end    
+})
+
+MTab:AddButton({
+Name = "AutoBuyAllSwords",
+    Callback = function()
+     _G.autoBuyAllSwords = true
+        while wait() do
+            while _G.autoBuyAllSwords == true do
+               local args = {[1] = "buyAllSwords",[2] = "Blazing Vortex Island"}
+               game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+            wait()
+            end
+        end
+  	end    
+})
+
+MTab:AddButton({
+   Name = "DisableAutoBuyAllSwords",
+       Callback = function()
+        _G.autoBuyAllSwords = false
+           while wait() do
+               while _G.autoBuyAllSwords == true do
+                  local args = {[1] = "buyAllSwords",[2] = "Blazing Vortex Island"}
+                  game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+               wait()
+               end
+           end
+        end    
+   })
+
+   MTab:AddButton({
+      Name = "AutoBuyAllBelts",
+          Callback = function()
+           _G.autoBuyAllBelts = true
+              while wait() do
+                  while _G.autoBuyAllBelts == true do
+                     local args = {[1] = "buyAllBelts",[2] = "Blazing Vortex Island"}
+                     game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+                  wait()
+                  end
+              end
+           end    
+      })
+
+      MTab:AddButton({
+         Name = "DisableAutoBuyAllBelts",
+             Callback = function()
+              _G.autoBuyAllBelts = false
+                 while wait() do
+                     while _G.autoBuyAllBelts == true do
+                        local args = {[1] = "buyAllBelts",[2] = "Blazing Vortex Island"}
+                        game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer(unpack(args))
+                     wait()
+                     end
+                 end
+              end    
+         })
+
+local TPTab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+TPTab:AddButton({
+	Name = "Spawn Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.4746742, 3.19602466, 30.9029865, -0.0261309557, 2.75460055e-09, -0.999658525, -4.64094851e-09, 1, 2.87685542e-09, 0.999658525, 4.71453898e-09, -0.0261309557)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Astral Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(232.594055, 2044.78235, 266.41507, -0.258864403, 0, 0.965913713, 0, -1, 0, 0.965913713, 0, 0.258864343)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Enchanted Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(45.8419991, 787.232178, -151.813995, -0.766061664, -0, -0.642767608, 0, -1.00000048, 0, -0.642767608, 0, 0.766061246)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Mystical Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(183.842133, 4070.43237, 44.2856903, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Space Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.994003, 5686.7334, 72.4150009, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Tundra Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.994003, 9314.7334, 72.4150009, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Eternal Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.994003, 13709.5869, 72.4150009, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Sandstorm",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.994003, 17715.8828, 72.4150009, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Thunderstorm",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.994003, 24099.5762, 72.4150009, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Ancient Inferno Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 28292.5195, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Midnight Shadow Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 33243.2109, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Mythical Souls Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 39353.8047, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Winter Wonderland Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 46046.7891, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Golden Master Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 52643.9961, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Dragon Legend Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 59630.9141, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Cybernetic Legends Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 66705.4062, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Skystorm Ultraus Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 70307.3984, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Chaos Legends Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 74479.0938, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Soul Fusion Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 79783.2266, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Dark Elements Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 83235.2266, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Inner Peace Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 87087.3125, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+TPTab:AddButton({
+	Name = "Blazing Vortex Island",
+	   Callback = function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(140.093933, 91282.3125, 66.5151367, 0.939700544, 0, -0.341998369, 0, -1.00000048, -0, -0.341998369, 0, -0.939700961)
+  	end    
+})
+
+
+
+
